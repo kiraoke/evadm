@@ -28,7 +28,7 @@ Item {
     anchors {
       horizontalCenter: parent.horizontalCenter
       verticalCenter: parent.verticalCenter
-      verticalCenterOffset: 250 
+      verticalCenterOffset: Screen.height / 5; 
     }
 
     UserPanel { id: userPanel }
