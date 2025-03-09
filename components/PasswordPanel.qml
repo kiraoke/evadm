@@ -8,7 +8,7 @@ TextField {
     selectByMouse: true
     echoMode: config.HidePassword === "true" ? TextInput.Password : TextInput.Normal
     passwordCharacter: "•"
-    padding: -10
+    padding: -5
     cursorVisible: false
     onActiveFocusChanged: {
       cursorVisible = false

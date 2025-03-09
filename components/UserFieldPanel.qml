@@ -5,12 +5,12 @@ import QtQuick.Controls 2.15
 TextField {
     id: usernameField
 
-    height: 15
+    height: 16
     width: inputWidth
     selectByMouse: true
 
     font {
-        family: config.FontFamily
+        family: "Noto Sans"
         pointSize: 10
         bold: true
     }
