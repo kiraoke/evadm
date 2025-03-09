@@ -8,58 +8,28 @@ TextField {
     selectByMouse: true
     echoMode: config.HidePassword === "true" ? TextInput.Password : TextInput.Normal
     passwordCharacter: "•"
+    padding: -10
+    cursorVisible: false
+    onActiveFocusChanged: {
+      cursorVisible = false
+    }
     
     font {
         family: config.FontFamily
-        pointSize: config.FontSize
+        pointSize: 16
         bold: true
     }
 
     placeholderText: config.PassPlaceholderText
     horizontalAlignment: TextInput.AlignHCenter
 
-    color: config.InputTextColor
+    color: "white"
     selectionColor: config.InputTextColor
     renderType: Text.NativeRendering
 
-    states: [
-        State {
-            name: "focused"
-            when: passwordField.activeFocus
-
-            PropertyChanges {
-                target: passFieldBg
-                color: Qt.darker(config.InputColor, 1.2)
-                border.width: config.InputBorderWidth
-            }
-        },
-        State {
-            name: "hovered"
-            when: passwordField.hovered
-
-            PropertyChanges {
-                target: passFieldBg
-                color: Qt.darker(config.InputColor, 1.2)
-            }
-        }
-    ]
-
     background: Rectangle {
         id: passFieldBg
-
-        border {
-            color: config.InputBorderColor
-            width: 0
-        }
-
-        color: config.InputColor
+        color: Qt.rgba(0, 0, 0, 0)
         radius: config.Radius
-    }
-
-    transitions: Transition {
-        PropertyAnimation {
-            properties: "color, border.width"
-            duration: 150
-        }
     }
 }

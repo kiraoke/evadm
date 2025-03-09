@@ -5,7 +5,7 @@ import QtQuick.Controls 2.15
 TextField {
     id: usernameField
 
-    height: inputHeight
+    height: 15
     width: inputWidth
     selectByMouse: true
 
@@ -19,37 +19,14 @@ TextField {
     placeholderText: config.UserPlaceholderText
     horizontalAlignment: Text.AlignHCenter
 
-    color: config.InputTextColor
+    color: "white"
     selectionColor: config.InputTextColor
     renderType: Text.NativeRendering
- 
-    states: [
-        State {
-            name: "focused"
-            when: usernameField.activeFocus
-
-            PropertyChanges {
-                target: userFieldBackground
-                color: Qt.darker(config.InputColor, 1.2)
-                border.width: config.InputBorderWidth
-            }
-        },
-        State {
-            name: "hovered"
-            when: usernameField.hovered
-
-            PropertyChanges {
-                target: userFieldBackground
-                color: Qt.darker(config.InputColor, 1.2)
-            }
-        }
-    ]
 
     background: Rectangle {
         id: userFieldBackground
 
-        color: config.InputColor
-        border.color: config.InputBorderColor
+        color: Qt.rgba(0, 0, 0, 0)
         border.width: 0
         radius: config.Radius
     }
