@@ -26,8 +26,9 @@ Item {
     width: inputWidth
 
     anchors {
-      centerIn: parent
-      margins: -100
+      horizontalCenter: parent.horizontalCenter
+      verticalCenter: parent.verticalCenter
+      verticalCenterOffset: 250 
     }
 
     UserPanel { id: userPanel }

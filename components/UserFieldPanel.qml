@@ -11,7 +11,7 @@ TextField {
 
     font {
         family: config.FontFamily
-        pointSize: config.FontSize
+        pointSize: 10
         bold: true
     }
 
@@ -19,7 +19,7 @@ TextField {
     placeholderText: config.UserPlaceholderText
     horizontalAlignment: Text.AlignHCenter
 
-    color: "white"
+    color: Qt.rgba(242, 243, 244, 0.75)
     selectionColor: config.InputTextColor
     renderType: Text.NativeRendering
 

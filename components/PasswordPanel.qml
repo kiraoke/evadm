@@ -16,7 +16,7 @@ TextField {
     
     font {
         family: config.FontFamily
-        pointSize: 16
+        pointSize: 24 
         bold: true
     }
 
